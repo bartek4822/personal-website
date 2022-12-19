@@ -1,0 +1,107 @@
+/* podstawowe wartości */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400;700&family=Vollkorn:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --background: rgb(5, 10, 25);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-color: rgba(255, 255, 255, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Rubik", sans-serif;
+}
+
+/* styl tekstu */
+
+nav h1,
+nav h2,
+nav h3,
+nav h4,
+nav h5,
+nav h6,
+nav a,
+nav p,
+span {
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* formatowanie navbara */
+
+nav {
+  display: flex;
+  width: 100vw;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav .nav-section {
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 1rem;
+  border-left: 1px solid var(--border-color);
+  justify-content: center;
+}
+
+nav .nav-section a {
+  text-transform: uppercase;
+}
+
+/* wymiary sekcji navbara */
+
+#nav-logo,
+#nav-navigation {
+  width: calc(100vw / 3);
+}
+#nav-socials,
+#nav-contact {
+  flex-grow: 1;
+}
+
+/* formatowanie sekcji navbara */
+
+#nav-logo {
+  justify-content: space-between;
+  font-family: "Vollkorn", serif;
+  font-size: 18px;
+}
+#nav-logo a {
+  text-transform: capitalize;
+}
+#nav-logo button {
+  background: none;
+  color: var(--text-color);
+  border: none;
+}
+#nav-logo button i {
+  transition: all 0.3s;
+  transform: scaleX(1);
+  cursor: pointer;
+}
+body.light #nav-logo button i {
+  transition: all 0.3s;
+  transform: scaleX(-1);
+}
+
+#nav-socials,
+#nav-navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+body.light {
+  --background: rgba(255, 255, 255);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --text-color: rgb(5, 10, 25);
+}
